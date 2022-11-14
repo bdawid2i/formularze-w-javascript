@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <label for="number" id="form1">
+        <input 
+        type="number"
+        placeholder="Wpisz liczbę">
+        
+    </label>
+    <label for="number" id="form2">
+        <input 
+        type="number"
+        placeholder="Wpisz liczbę">
+    
+    </label>
+    <input type="submit" value="Oblicz" id="przycisk">
+    <p id="Wynik"></p>
+
+    <script>
+        const liczba1 = document.getElementById("form1");
+        const liczba2 = document.getElementById("form2");
+        const przycisk = document.getElementById("przycisk");
+        const Wynik = document.getElementById("Wynik");
+
+        function sum();
+        {
+            const liczba1_wartosc = parseInt(liczba1.value);
+            const liczba2_wartosc = parseInt(liczba2.value);
+            
+            Wynik.innerHTML = 'Wynik dodawania to ' + (liczba1_wartosc+liczba2_wartosc);
+
+        }
+        przycisk.addEventListener('click', sum);
+    </script>
+    
+</body>
+</html>
